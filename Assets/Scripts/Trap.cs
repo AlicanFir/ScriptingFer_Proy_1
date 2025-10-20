@@ -7,6 +7,7 @@ public class Trap : MonoBehaviour
     //escritura
     [SerializeField] private float velocidad = 0;
     [SerializeField] private Vector3 direccionInicial = new Vector3(1,0,0);
+    [SerializeField] private float rango = 1.6f;
     
     //lectura
     private Vector3 direccionActual;
@@ -25,7 +26,7 @@ public class Trap : MonoBehaviour
         timer += Time.deltaTime; // esto es un temporizador
         transform.Translate(direccionActual * (velocidad * Time.deltaTime));
 
-        if (timer >= 2f)
+        if (timer >= rango)
         {
             direccionActual *= -1;
             timer = 0;

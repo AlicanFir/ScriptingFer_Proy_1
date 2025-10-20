@@ -7,18 +7,17 @@ public class Player : MonoBehaviour
     //Variables
     [SerializeField] private TMP_Text coinsCounter;
     
-    private Vector3 posicionInicial;
 
     private int coins = 0;
     
     [SerializeField]  private float velocidad;
+    [SerializeField] private Vector3 posicionInicial = new Vector3(0,0,0);
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Application.targetFrameRate = 60; // capa el framerate a 60fps
         
-        posicionInicial = new Vector3(7, 0, 0);
         this.gameObject.transform.position = posicionInicial;
         
         //this.gameObject.transform.rotation = Quaternion.Euler(0,90,45); //Un quaternion es una especie de vector que indica una rotacion. te da la rotacion por el camino mas corto.

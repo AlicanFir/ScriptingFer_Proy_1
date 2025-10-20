@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6550398957741093249}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18600d2cd570ee47bc7cacbad7fff72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  colisionMonedas: {fileID: 0}
+  coinsCounter: {fileID: 0}
   velocidad: 5
 --- !u!212 &5985358327941704820
 SpriteRenderer:
@@ -261,7 +261,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.45394674, g: 0.98490566, b: 0.37723738, a: 1}
+  m_Color: {r: 0.28675678, g: 0.8490566, b: 0.6019936, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
