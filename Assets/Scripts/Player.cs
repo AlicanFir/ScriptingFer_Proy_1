@@ -1,14 +1,21 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
     //Variables
     [SerializeField] private TMP_Text coinsCounter;
+    [SerializeField] private TMP_Text deathCounter;
+    [SerializeField] private int condicionPasada;
+    [SerializeField] private int nextScene;
+    
+    Transition transitionScript;
     
 
     private int coins = 0;
+    private int deaths = 0;
     
     [SerializeField]  private float velocidad;
     [SerializeField] private Vector3 posicionInicial = new Vector3(0,0,0);
@@ -19,27 +26,19 @@ public class Player : MonoBehaviour
         Application.targetFrameRate = 60; // capa el framerate a 60fps
         
         this.gameObject.transform.position = posicionInicial;
-        
-        //this.gameObject.transform.rotation = Quaternion.Euler(0,90,45); //Un quaternion es una especie de vector que indica una rotacion. te da la rotacion por el camino mas corto.
         this.gameObject.transform.eulerAngles = new Vector3(0,0,0); // <-- mejor esto que poner quaternion o quaternion.euler
-        //la w es el orden en el que se aplican los giros
-        //Quaternion.Euler transforma de euler a quaterniones
         
-        //this.gameObject.transform.localScale = new Vector3(2,2,1);
-
+        transitionScript = gameObject.GetComponent<Transition>();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Time.deltaTime = por segundo
-        //this.gameObject.transform.position += new Vector3(0, 3f, 0)* Time.deltaTime; // 3 unidades por segundo
-
         Movement();
     }
     
-    private void OnTriggerEnter2D(Collider2D other) //ASEGURATE DE QUE ES ESTO SI NO NO FUNCIONA
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Coin"))
         {
@@ -48,9 +47,18 @@ public class Player : MonoBehaviour
         else if (other.gameObject.CompareTag("Damage"))
         {
             transform.position = posicionInicial;
+            deaths++;
+            deathCounter.text = "Deaths : " + deaths.ToString();
+        }
+        else if (other.gameObject.CompareTag("PassPlatform") && coins == condicionPasada)
+        {
+            transitionScript.LoadNextLevel();
+        }
+        else if (other.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("AHHHHHHHHHHHH");
         }
     }
-
     private void ObtenerCoins(Collider2D other)
     {
         coins++;
