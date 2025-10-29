@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 47bc4e88c54f5c54384cf32032da4e9f
+guid: 96d5374f4f98c324db404be651fe71c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4641414048664931941
-    second: Fondo_WHG_0
+      213: -2061570467365767944
+    second: Fondo_WHG_wIN_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fondo_WHG_0
+      name: Fondo_WHG_wIN_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 2048
-        height: 2048
+        height: 1152
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b91b1d59382669fb0800000000000000
-      internalID: -4641414048664931941
+      spriteID: 8f43a352594d363e0800000000000000
+      internalID: -2061570467365767944
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fondo_WHG_0: -4641414048664931941
+      Fondo_WHG_wIN_0: -2061570467365767944
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,10 +10,6 @@ public class Transition : MonoBehaviour
     public float transitionTime;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            LoadNextLevel();
-        }
     }
     public void LoadNextLevel()
     {
@@ -28,5 +24,4 @@ public class Transition : MonoBehaviour
         
         SceneManager.LoadScene(levelIndex);
     }
-
 }

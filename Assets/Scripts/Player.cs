@@ -1,5 +1,6 @@
 using System;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,17 +11,22 @@ public class Player : MonoBehaviour
     [SerializeField] private TMP_Text deathCounter;
     [SerializeField] private int condicionPasada;
     [SerializeField] private int nextScene;
+    [SerializeField] private GameObject deathScreen;
     
-    Transition transitionScript;
+    private Rigidbody2D rb;
+    [SerializeField] Transition transitionScript;
     
 
     private int coins = 0;
     private int deaths = 0;
+
+    private float hInput;
+    private float vInput;
+    private bool isDead = false;
     
     [SerializeField]  private float velocidad;
     [SerializeField] private Vector3 posicionInicial = new Vector3(0,0,0);
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Application.targetFrameRate = 60; // capa el framerate a 60fps
@@ -28,16 +34,33 @@ public class Player : MonoBehaviour
         this.gameObject.transform.position = posicionInicial;
         this.gameObject.transform.eulerAngles = new Vector3(0,0,0); // <-- mejor esto que poner quaternion o quaternion.euler
         
-        transitionScript = gameObject.GetComponent<Transition>();
-
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Movement();
+        hInput = Input.GetAxisRaw("Horizontal");
+        vInput = Input.GetAxisRaw("Vertical");
+
+        if (deaths >= 5)
+        {
+            Death();
+        }
     }
-    
+
+    private void FixedUpdate()
+    {
+        if (isDead)
+        {
+            
+        }
+        else if (!isDead)
+        {
+            Movement();
+        }
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Coin"))
@@ -54,11 +77,8 @@ public class Player : MonoBehaviour
         {
             transitionScript.LoadNextLevel();
         }
-        else if (other.gameObject.CompareTag("Wall"))
-        {
-            Debug.Log("AHHHHHHHHHHHH");
-        }
     }
+    
     private void ObtenerCoins(Collider2D other)
     {
         coins++;
@@ -69,10 +89,13 @@ public class Player : MonoBehaviour
     
     private void Movement()
     {
-        float hInput = Input.GetAxisRaw("Horizontal");
-        float vInput = Input.GetAxisRaw("Vertical");
-        
-        Vector3 movementDirection = new Vector3(hInput, vInput,0).normalized;
-        transform.Translate(movementDirection*(velocidad*Time.deltaTime), Space.World); //metodo para realizar traslaciones
+        rb.AddForce(new Vector2(hInput,vInput)*velocidad,  ForceMode2D.Impulse);
     }
+
+    private void Death()
+    {
+        isDead =  true;
+        deathScreen.SetActive(true);
+    }
+    
 }

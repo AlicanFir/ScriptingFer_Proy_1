@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7921942004072785977}
-  - component: {fileID: 5186596327260597781}
+  - component: {fileID: 4471542141851275436}
   - component: {fileID: 3489216499404955012}
   m_Layer: 0
   m_Name: Trap_L
@@ -125,7 +125,7 @@ Transform:
   - {fileID: 1529586767592091067}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5186596327260597781
+--- !u!114 &4471542141851275436
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,12 +134,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1518312828298494724}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d8584e031d9fb54e8c91392a0f3b169, type: 3}
+  m_Script: {fileID: 11500000, guid: 4af09ccf7a0c9904a9637367f384c03e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Trap
+  m_EditorClassIdentifier: Assembly-CSharp::TrapL
   velocidad: 2
-  direccionInicial: {x: 1, y: 0, z: 0}
-  rango: 1.6
+  direccionHorizontal: {x: 1, y: 0, z: 0}
+  direccionVertical: {x: 0, y: -1, z: 0}
+  rango: 1
 --- !u!58 &3489216499404955012
 CircleCollider2D:
   m_ObjectHideFlags: 0

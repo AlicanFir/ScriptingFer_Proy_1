@@ -50,9 +50,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   coinsCounter: {fileID: 0}
   deathCounter: {fileID: 0}
-  condicionPasada: 1
+  condicionPasada: 4
   nextScene: 2
-  velocidad: 5
+  transitionScript: {fileID: 0}
+  velocidad: 3
   posicionInicial: {x: -6, y: 2, z: 0}
 --- !u!212 &5985358327941704820
 SpriteRenderer:
@@ -166,14 +167,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146624902311023621}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 50
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
