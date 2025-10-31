@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main_Menu.unity
     guid: 8e5777a1c969ee741859f0fa07c610ba
   - enabled: 1
+    path: Assets/Scenes/Turorial.unity
+    guid: 5149a55a9fb1bc64a8ade12c7bd13d66
+  - enabled: 1
     path: Assets/Scenes/Level_1_Balls.unity
     guid: 900b4ad202143e24c8ff783cfe6b9a24
   - enabled: 1
