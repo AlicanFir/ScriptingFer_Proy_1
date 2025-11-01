@@ -337,7 +337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart Level
+  m_text: 'Restart '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -636,7 +636,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_TargetDisplay: 0
 --- !u!114 &7239678805549777675
 MonoBehaviour:
@@ -934,7 +934,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2807958950349143566}
         m_TargetAssemblyTypeName: Main_Menu, Assembly-CSharp
-        m_MethodName: RestartScene
+        m_MethodName: GameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

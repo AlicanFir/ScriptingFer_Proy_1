@@ -3566,14 +3566,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 207099323223715038, guid: 2c58d2225ef49424aa08b45d43d07ec8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1748883491524305185}
-    - target: {fileID: 207099323223715038, guid: 2c58d2225ef49424aa08b45d43d07ec8, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GameOver
-      objectReference: {fileID: 0}
     - target: {fileID: 3956782125045737340, guid: 2c58d2225ef49424aa08b45d43d07ec8, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3658,26 +3650,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DeathPannel
       objectReference: {fileID: 0}
-    - target: {fileID: 8869910850581633757, guid: 2c58d2225ef49424aa08b45d43d07ec8, type: 3}
-      propertyPath: m_text
-      value: 'Restart '
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c58d2225ef49424aa08b45d43d07ec8, type: 3}
---- !u!114 &1748883491524305185 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2807958950349143566, guid: 2c58d2225ef49424aa08b45d43d07ec8, type: 3}
-  m_PrefabInstance: {fileID: 1748883491524305184}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900731613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6a6d961f27b025469b6ac2927a73d5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Main_Menu
 --- !u!1001 &2039431274322038801
 PrefabInstance:
   m_ObjectHideFlags: 0

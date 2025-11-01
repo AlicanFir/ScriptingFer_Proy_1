@@ -341,7 +341,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 379401896}
         m_TargetAssemblyTypeName: Main_Menu, Assembly-CSharp
-        m_MethodName: OnClickPlayButton
+        m_MethodName: GameOver
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -533,6 +533,10 @@ PrefabInstance:
     - target: {fileID: 6637513522131428949, guid: dbbf20d4f186c4148922f3879d9c9a1c, type: 3}
       propertyPath: m_Name
       value: LevelLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 6637513522131428949, guid: dbbf20d4f186c4148922f3879d9c9a1c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7828501578401117953, guid: dbbf20d4f186c4148922f3879d9c9a1c, type: 3}
       propertyPath: m_LocalPosition.x

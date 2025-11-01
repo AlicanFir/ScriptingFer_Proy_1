@@ -64,6 +64,7 @@ public class TrapL : MonoBehaviour
     {
         timerVertical += Time.deltaTime;
         transform.Translate(direccionVerticalActual * (velocidad * Time.deltaTime));
+        
         if (timerVertical >= rango)
         {
             direccionVerticalActual *= -1;

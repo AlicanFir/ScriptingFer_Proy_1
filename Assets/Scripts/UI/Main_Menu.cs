@@ -7,7 +7,6 @@ public class Main_Menu : MonoBehaviour
 {
     [SerializeField] private int nextScene;
     
-    
     public void OnClickPlayButton()
     {
         SceneManager.LoadScene(nextScene);

@@ -52,7 +52,6 @@ public class Player : MonoBehaviour
     {
         if (isDead)
         {
-            
         }
         else if (!isDead)
         {

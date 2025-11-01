@@ -8,6 +8,7 @@ public class Transition : MonoBehaviour
 
     [SerializeField] private GameObject textos;
     public float transitionTime;
+    
     private void Update()
     {
     }
@@ -19,9 +20,8 @@ public class Transition : MonoBehaviour
     IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("Start");
-        
         yield return new WaitForSeconds(transitionTime); 
-        
         SceneManager.LoadScene(levelIndex);
     }
+    
 }
